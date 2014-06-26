@@ -1,0 +1,10 @@
+# Always color, even if piping to a another program
+--nocolor
+--pager=less
+--ignore-dir=node_modules/
+--ignore-dir=.sass-cache/
+--type-add=css=.css,.scss,.sass,.styl,.less
+--type-add=html=.html,.htm,.jade,.ascx
+--type-set=coffee=.coffee
+--type-set=jade=.jade
+--type-set=stylus=.styl
