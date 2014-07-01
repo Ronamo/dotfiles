@@ -11,7 +11,7 @@ syntax enable "Enable syntax highlighting
 set hlsearch "Enable search hit highlights
 set autoread " Reload externally changed files
 set ruler
-set cmdheight=2
+set cmdheight=4
 set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -40,6 +40,9 @@ set foldmethod=indent "Folds based on indentation
 set foldnestmax=10 "Deepest fold is 10 levels
 set nofoldenable "don't fold by default
 set foldlevel=1
+" STATUS LINE
+set statusline+=%#todo#%F
+set laststatus=2
 " Easier buffer switching
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 " PATHOGEN STUFF
