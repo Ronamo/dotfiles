@@ -1,3 +1,4 @@
+filetype plugin on
 " ==============================
 " APPEARANCE
 " ==============================
@@ -39,6 +40,8 @@ set foldmethod=indent "Folds based on indentation
 set foldnestmax=10 "Deepest fold is 10 levels
 set nofoldenable "don't fold by default
 set foldlevel=1
+" Easier buffer switching
+:nnoremap <F5> :buffers<CR>:buffer<Space>
 " PATHOGEN STUFF
 execute pathogen#infect()
 
