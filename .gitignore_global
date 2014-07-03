@@ -1,5 +1,8 @@
 *~
 .DS_Store
+Desktop.ini
+._*
+Thumbs.db
 *.hammer*
 /node_modules
 /bower_components

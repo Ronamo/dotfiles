@@ -5,14 +5,34 @@ filetype plugin on
 set background=dark
 colorscheme base16-eighties
 set guifont=Anonymous\ Pro:h16
-" ==============================
-set nu "Line numbers
-syntax enable "Enable syntax highlighting
-set hlsearch "Enable search hit highlights
-set autoread " Reload externally changed files
+" Don’t add empty newlines at the end of files
+set binary
+set noeol
+" Show 'invisible' characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+  set undodir=~/.vim/undo
+endif
+" Scroll three lines before horizontal border
+set scrolloff=3
+" Don't reset cursor to start of line when moving
+set nostartofline
+" Line highlighting
+set cursorline
+" Line numbers
+set number
+" Enable syntax highlighting
+syntax enable
+" Enable search hit highlights
+set hlsearch
+" Reload externally changed files
+set autoread
 set ruler
 set cmdheight=4
-set hid
+set hidden
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set ignorecase
@@ -24,27 +44,39 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-set nobackup
-set nowb
-set noswapfile
+" ====================
+" TABS
+" ====================
 set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
+" Enable linebreak
 set lbr
 set tw=500
-set ai "Auto indent
-set si "Smart indent
-set wrap!"Wrap lines
-set foldmethod=indent "Folds based on indentation
-set foldnestmax=10 "Deepest fold is 10 levels
-set nofoldenable "don't fold by default
+" Auto indent
+set ai
+" Smart indent
+set si
+" Wrap lines
+set wrap!
+" Folds based on indentation
+set foldmethod=indent
+" Deepest fold is 10 levels
+set foldnestmax=10
+" don't fold by default
+set nofoldenable
 set foldlevel=1
+" ====================
 " STATUS LINE
+" ====================
 set statusline+=%#todo#%F
 set laststatus=2
+" Toggle NERDTree with
+:nnoremap <F2> :NERDTreeToggle<CR>
 " Easier buffer switching
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 " PATHOGEN STUFF
 execute pathogen#infect()
-
+" Have ctrl-p work in current directory
+let g:ctrlp_working_path_mode = 0
