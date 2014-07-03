@@ -5,6 +5,9 @@ filetype plugin on
 set background=dark
 colorscheme base16-eighties
 set guifont=Anonymous\ Pro:h16
+" AIRLINE
+let g:airline_theme="wombat"
+
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
