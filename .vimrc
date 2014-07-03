@@ -31,7 +31,7 @@ set hlsearch
 " Reload externally changed files
 set autoread
 set ruler
-set cmdheight=4
+set cmdheight=2
 set hidden
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -70,7 +70,12 @@ set foldlevel=1
 " ====================
 " STATUS LINE
 " ====================
-set statusline+=%#todo#%F
+set statusline+=%#Question#[\ %-2n]
+set statusline+=%#Directory#\ %F
+" Swap to right
+set statusline+=%=
+" Curline and count
+set statusline+=%#ErrorMsg#[%l:%L]\ %#MoreMsg#%y
 set laststatus=2
 " Toggle NERDTree with
 :nnoremap <F2> :NERDTreeToggle<CR>
