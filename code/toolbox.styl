@@ -1,0 +1,33 @@
+// THE FOLLOWING WERE BORROWED FROM
+// CHRIS COYIER
+// http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
+// Block that covers entire screen
+coverer()
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+// CSS vertical / horizontal centering trick
+centered()
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+// Name explains it all
+word-wrap()
+  word-break break-word
+  -webkit-hyphens auto
+  -moz-hyphens auto
+  hyphens auto
+// Hide content behind an ellipsis
+ellipsis()
+  overflow hidden
+  white-space nowrap
+  text-overflow ellipsis
+// Shades of Grey
+black($opacity)
+  rgba(black, $opacity)
+// Shades of Grey
+white($opacity)
+  rgba(white, $opacity)
