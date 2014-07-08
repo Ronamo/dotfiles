@@ -88,3 +88,5 @@ set laststatus=2
 execute pathogen#infect()
 " Have ctrl-p work in current directory
 let g:ctrlp_working_path_mode = 0
+" REMOVE GVIM SCROLLBAR
+set guioptions-=r
