@@ -89,8 +89,8 @@ set laststatus=2
 " Easier buffer switching
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 :noremap <leader>bb :buffers<CR>:buffer<Space>
-" Use trailing-whitespace to trim whitespace
-:noremap <leader>tw :FixWhitespace<CR>
+" Use vim-better-whitespace to trim whitespace
+:noremap <leader>tw :StripWhitespace<CR>
 " PATHOGEN STUFF
 execute pathogen#infect()
 " Have ctrl-p work in current directory
