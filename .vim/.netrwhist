@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Webroot/portfolio/src'
+let g:netrw_dirhist_2='/Webroot/portfolio'
+let g:netrw_dirhist_3='/Webroot/portfolio/src'
+let g:netrw_dirhist_4='/Webroot/mas/src'

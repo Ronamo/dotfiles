@@ -48,13 +48,12 @@ twm  ()  { task $1 modify $2 $3 $4 }
 
 alias brewinfo='~/applications/bashscripts/brewinfo'
 alias df='df -h'
-alias cls='clear'
 
 # LS in Color
-alias ls='ls -G'
+alias lf='ls -GF'
 # LS -(A)ll files by file (s)ize in
 # (h)uman readable, with (F)symbols in (X)columns
-alias la='ls -asFxh'
+alias la='ls -Asxh'
 # LS - List directories
 alias lsd='la -F | grep --colour "/"'
 

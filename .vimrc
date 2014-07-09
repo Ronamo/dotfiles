@@ -1,5 +1,6 @@
 set nocompatible
 filetype plugin on
+set shortmess+=I
 " Change <leader>
 let mapleader=";"
 " ==============================
