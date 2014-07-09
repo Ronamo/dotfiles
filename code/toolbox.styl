@@ -31,3 +31,19 @@ black($opacity)
 // Shades of Grey
 white($opacity)
   rgba(white, $opacity)
+// Original content
+// IMAGE REPLACEMENT
+ir()
+  background-color transparent
+  border 0
+  overflow hidden
+  /* IE 6/7 fallback */
+  *text-indent -9999px
+  &::before
+    content ""
+    display block
+    width 0
+    height 150%
+// Tiled backgrounds
+tiledbg($url, repeat= repeat)
+  background url($url) $repeat

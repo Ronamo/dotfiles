@@ -1,4 +1,7 @@
+set nocompatible
 filetype plugin on
+" Change <leader>
+let mapleader=";"
 " ==============================
 " APPEARANCE
 " ==============================
@@ -82,11 +85,15 @@ set statusline+=%#ErrorMsg#[%l:%L]\ %#MoreMsg#%y
 set laststatus=2
 " Toggle NERDTree with
 :nnoremap <F2> :NERDTreeToggle<CR>
+:noremap <leader>t :NERDTreeToggle<CR>
 " Easier buffer switching
 :nnoremap <F5> :buffers<CR>:buffer<Space>
+:noremap <leader>bb :buffers<CR>:buffer<Space>
+" Use trailing-whitespace to trim whitespace
+:noremap <leader>tw :FixWhitespace<CR>
 " PATHOGEN STUFF
 execute pathogen#infect()
 " Have ctrl-p work in current directory
 let g:ctrlp_working_path_mode = 0
-" REMOVE GVIM SCROLLBAR
+" REMOVE SCROLLBAR FROM GVIM
 set guioptions-=r
