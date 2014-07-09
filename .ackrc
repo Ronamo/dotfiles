@@ -1,10 +1,15 @@
-# Always color, even if piping to a another program
---nocolor
 --pager=less
 --ignore-dir=node_modules/
 --ignore-dir=.sass-cache/
+--column
+# Customize types for easier searching
 --type-add=css=.css,.scss,.sass,.styl,.less
 --type-add=html=.html,.htm,.jade,.ascx
---type-set=coffee=.coffee
---type-set=jade=.jade
---type-set=stylus=.styl
+--type-add=coffee=.coffee
+--type-add=jade=.jade
+--type-add=stylus=.styl
+# Always color, even if piping to a another program
+--color
+--color-filename=green
+--color-match=red
+--color-lineno=cyan
