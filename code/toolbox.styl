@@ -1,7 +1,6 @@
-// -----------------------------------------------------------------------------
-// THE FOLLOWING WERE BORROWED FROM CHRIS COYIER
+// THE FOLLOWING WERE BORROWED FROM
+// CHRIS COYIER
 // http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
-// -----------------------------------------------------------------------------
 // Block that covers entire screen
 coverer()
   position absolute
@@ -32,11 +31,7 @@ black($opacity)
 // Shades of Grey
 white($opacity)
   rgba(white, $opacity)
-
-// -----------------------------------------------------------------------------
 // Original content
-// -----------------------------------------------------------------------------
-
 // IMAGE REPLACEMENT
 ir()
   background-color transparent
@@ -50,13 +45,11 @@ ir()
     width 0
     height 150%
 // Tiled backgrounds
-tiledbg($url, repeat= repeat)
+tiledbg($url, $repeat= repeat)
   background url($url) $repeat
 
-// -----------------------------------------------------------------------------
 // http://www.lukeharrison.net/blog/4-useful-sass-mixins/
-// -----------------------------------------------------------------------------
-tabs($width, _height, _spacing, _bg-color, _font-color, _font-size, _font-weight, _hover-color, _border-radius)
+tabs($width, $height, $spacing, $bg-color, $font-color, $font-size, $font-weight, $hover-color, $border-radius)
   margin 0
   list-style none
   display inline-block
@@ -85,80 +78,3 @@ tabs($width, _height, _spacing, _bg-color, _font-color, _font-size, _font-weight
       text-decoration none
     &:hover
       background $hover-color
-
-dropdown($width, _item-padding, _bg-color, _hover-color, _font-color, _font-size, _font-weight, _text-align, _border-radius)
-  display block
-  width $width
-  margin 0
-  list-style none
-  position absolute
-  &:before
-    content ""
-    width 0
-    height 0
-    border-style solid
-    border-width 0 17.5.px 25px 17.5px
-    border-color transparent transparent $bg-color transparent
-    position absolute
-    top -25px
-    left 50%
-    margin-left -17px
-  & li
-    display block
-    background $bg-color
-    &:first-child
-      border-top-left-radius $border-radius
-      border-top-right-radius $border-radius
-    &:last-child
-      border-bottom-left-radius $border-radius
-      border-bottom-right-radius $border-radius
-    &:hover
-      background $hover-color
-    & a
-      display block
-      width 100%
-      height 100%
-      padding $item-padding
-      text-decoration none
-      color $font-color
-      font-size $font-size
-      font-weight $font-weight
-      text-align $text-align
-      -moz-box-sizing border-box
-      box-sizing border-box
-      background-clip border-box
-
-animated-caption($font-color, $bg-color, $bg-opacity, $padding, $transition-speed)
-  display inline-block
-  position relative
-  overflow hidden
-  & img
-    display block
-    width 100%
-    height auto
-  & span.outer
-    display block
-    width 100%
-    -moz-box-sizing border-box
-    box-sizing border-box
-    padding $padding
-    color $font-color
-    position absolute
-    bottom -100px
-    transition bottom $transition-speed ease
-    & span.inner
-      margin 0
-      position relative
-    &::before
-      content ""
-      display block
-      position absolute
-      z-index 0
-      left 0
-      top 0
-      width 100%
-      height 100%
-      background $bg-color
-      opacity $bg-opacity
-  &:hover span.outer
-    bottom 0
