@@ -84,6 +84,9 @@ set statusline+=%=
 " Curline and count
 set statusline+=%#ErrorMsg#[%l:%L]\ %#MoreMsg#%y
 set laststatus=2
+" Remap jk and kj to escape
+:inoremap jk <ESC>
+:inoremap kj <ESC>
 " Toggle NERDTree with
 :nnoremap <F2> :NERDTreeToggle<CR>
 :noremap <leader>t :NERDTreeToggle<CR>
